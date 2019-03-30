@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
 import 'bulma/css/bulma.css';
+import './App.css';
 import FoodBox from './FoodBox';
 
 class App extends Component {

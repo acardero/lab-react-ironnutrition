@@ -12,9 +12,10 @@ class AddFormFood extends Component {
     calories: '',
   };
 
-  toggleForm = bool => {
+  toggleForm = () => {
+    const {form} = this.state;
     this.setState({
-      form: bool,
+      form: !form,
     });
   };
 
@@ -36,12 +37,13 @@ class AddFormFood extends Component {
   }
 
   render() {
+    const {form} = this.state;
+
     return (
       <div>
-        <CoolButton OnClick={() => this.toggleForm(true)}>
-          Add new Food
+        <CoolButton OnClick={this.toggleForm}>
+          {form?"Hide Form":"Add new Food"}
         </CoolButton>
-        <CoolButton OnClick={() => this.toggleForm(false)}>hide</CoolButton>
         {this.state.form && (
           <form onSubmit={event => this.handleFormSubmit(event)}>
             <FormField
