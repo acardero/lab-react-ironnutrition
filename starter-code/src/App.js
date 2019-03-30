@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bulma/css/bulma.css';
 import FoodBox from './FoodBox';
-import AddFormFood from './AddFoodForm';
 
 class App extends Component {
   render() {
